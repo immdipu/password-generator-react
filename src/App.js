@@ -1,24 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import InputForm from "./components/InputForm";
+import SecondBox from "./components/SecondBox";
+
 
 function App() {
+  const [password, setPassword] = useState("P4$5WOrD!");
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <main className=" w-full max-w-xl m-auto flex flex-col gap-2" >
+        <h1 className="text-[#807c92] text-center font-semibold text-2xl my-4">Password Generator</h1>
+        <InputForm password={password} />
+        <SecondBox setPassword={setPassword} password={password} />
+      </main>
+    </>
   );
 }
 
