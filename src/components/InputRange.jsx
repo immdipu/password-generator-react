@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import RangeSlider from "./RangeSlider";
 
 const InputRange = ({ value, handleChange }) => {
